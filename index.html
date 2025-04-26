@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url("https://wallpaperaccess.com/full/1555163.jpg");
+                background-repeat: no-repeat;
+                background-attachment:fixed;
+                background-size: cover;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                color: White;
+            }
+            .botoes {
+                background-color: silver;
+                margin: 8px;
+                padding: 15px 20px;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+
+    <h1>Exercícios de Java Script</h1>
+    <h3>Entregar dia 08/05/2025</h3>
+    <div class="botoes">
+    <button onclick="AbrirExercicio1()"> Exercício 1</button>
+    <script>
+    function AbrirExercicio1() {
+    const NovaAba = window.open("","_blank")
+        const conteudo = `
+          <!DOCTYPE html>
+          <html>
+           <head>
+            <title>Exercício 1 - Palíndromo</title>
+            <style>
+                body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                color: black;
+                padding: 50px;
+                }
+                .botoes {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: silver;
+                margin: 8px;
+                padding: 15px 20px;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                color: black;
+                margin: 200px 10px 3px 600px;
+                border: 0;
+            }
+            </style>
+          </head>
+          <body>
+
+            <h2>Verificador de Palíndromo</h2>
+
+            <button class="botoes" onclick="Voltar()">Voltar</button>
+            <script>
+             function Voltar()  {
+               window.close();
+               }
+             let N = prompt("Digite um número");
+             if (N) {
+             let digito = N.split('').reverse().join('');
+             if (digito === N) {
+             document.write("Seu número é um palíndromo");
+             } else {
+             document.write("Seu número não é um Palíndromo");
+             } 
+             } else {
+             document.write("Tente Novamente");
+             }
+    <\/script>
+</body>
+</html>
+`;
+NovaAba.document.open();
+NovaAba.document.write(conteudo);
+NovaAba.document.close();
+    }
+    </script>
+     <button onclick="AbrirExercicio2()"> Exercício 2</button>
+     <script>
+     function AbrirExercicio2() {
+     const NovaAba = window.open("","_blank")
+         const conteudo = `
+           <!DOCTYPE html>
+           <html>
+            <head>
+             <title>Exercício 2 - Pagamento Eletrônico</title>
+             <style>
+                 body {
+                 font-family: Arial, sans-serif;
+                 text-align: center;
+                 color: black;
+                 padding: 50px;
+                 } 
+                 .botoes {
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 background-color: silver;
+                 margin: 8px;
+                 padding: 15px 20px;
+                 text-align: center;
+                 font-family:Arial, Helvetica, sans-serif;
+                 color: black;
+                 margin: 200px 10px 3px 600px;
+                 border: 0;
+             }
+             </style>
+           </head>
+           <body>
+ 
+             <h2>Simulador de Pagamento Eletrônico</h2>
+
+               <button onclick="Simulador()">Simular</button>
+               <script>
+               function Simulador() {
+               let valor = parseFloat(prompt("Digite o valor da sua compra: R$: "));
+let pagamento = parseInt(prompt("Formas de pagamento: 1- Dinheiro; 2- Cheque; 3- Cartão."));
+if (pagamento ===1){
+let desconto = valor*0.05;
+let total = valor - desconto;
+alert("O desconto de 5% foi aplicado. Total a pagar: R$ "+total.toFixed(2));
+
+} else if (pagamento === 2){
+let data = prompt("Digite a data prevista para o pagamento: ");
+let juros = valor*0.05;
+let total = valor+juros;
+alert("Os juros de 5% foram aplicados.Pagamento previsto para: "+data+"Total a pagar: R$ "+total.toFixed(2));
+
+}else if (pagamento ===3){
+let juros = valor*0.07;
+let total = valor+juros;
+
+if(valor<100){
+alert("Valor menor que R$ 100. Parcelamento não permitido. Juros de 7% aplicado. Total a pagar: R$ "+total.toFixed(2));
+document.write("Valor menor que R$ 100. Parcelamento não permitido. Juros de 7% aplicado. Total a pagar: R$ "+total.toFixed(2));
+}else {
+let parcelas = parseInt(prompt("Em quantas vezes deseja parcelar?"));
+let valorparcela = total/parcelas;
+alert("Juros de 7% aplicado. Total a pagar: R$ "+total.toFixed(2)+"Parcelado em"+parcelas+"x de R$ "+valorparcela.toFixed(2));
+}
+
+}else{
+alert("Forma de pagamento Inválida.");
+document.write("Forma de pagamento Inválida.");
+}
+}
+     <\/script>
+
+     <button class="botoes" onclick="Voltar()">Voltar</button>
+         <script>
+          function Voltar()  {
+               window.close();
+               };
+               <\/script>
+ </body>
+ </html>
+ `;
+ NovaAba.document.open();
+ NovaAba.document.write(conteudo);
+ NovaAba.document.close();
+     }
+     </script>
+
+    <button onclick="AbrirExercicio3()"> Exercício 3</button>
+    <script>
+    function AbrirExercicio3() {
+    const NovaAba = window.open("","_blank")
+        const conteudo = `
+          <!DOCTYPE html>
+          <html>
+           <head>
+            <title>Exercício 3 - IMC</title>
+            <style>
+                body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                color: black;
+                padding: 50px;
+                } 
+                .botoes {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: silver;
+                margin: 8px;
+                padding: 15px 20px;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                color: black;
+                margin: 200px 10px 3px 600px;
+                border: 0;
+            }
+            </style>
+          </head>
+          <body>
+
+            <h2>Verificador de IMC</h2>
+            <div id="Resultado"></div>
+            <button class="botoes" onclick="Voltar()">Voltar</button>
+
+        <script>
+        function Voltar()  {
+        window.close();
+        }
+        alert ("Calculadora de IMC");    
+        let peso = prompt("Digite seu peso (kg):");
+        let altu = prompt("Digite sua altura(m):");
+
+        peso = peso.replace(",",".").trim()
+        altu = altu.replace(",",".").trim()
+
+        peso = parseFloat(peso);
+        altu = parseFloat(altu);
+
+        if (isNaN(peso)|| isNaN(altu)|| altu <=0 || peso <=0 || altu > 3) {
+
+        alert("Por favor, digite números válidos! A altura deve ser em metros (Ex. 1.80)");
+        } else {
+        let IMC = peso/(altu*altu)
+        alert ("O seu IMC é de "+IMC.toFixed(2)+"!");
+
+        window.onload = function() {
+        document.getElementById("Resultado").innerHTML="O seu IMC é de "+IMC.toFixed(2)+"!";
+        };
+        }
+    <\/script>
+    <img src="https://www.vitamenu.com.br/wp-content/uploads/2018/04/Tabela-IMC-500x209.png">
+</body>
+</html>
+`;
+NovaAba.document.open();
+NovaAba.document.write(conteudo);
+NovaAba.document.close();
+    }
+    </script>
+
+<button onclick="AbrirExercicio4()"> Exercício 4</button>
+    <script>
+    function AbrirExercicio4() {
+    const NovaAba = window.open("","_blank")
+        const conteudo = `
+          <!DOCTYPE html>
+          <html>
+           <head>
+            <title>Exercício 4 -Sabe os Números Certos?</title>
+            <style>
+                body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                color: black;
+                padding: 50px;
+                }
+                .botoes {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: silver;
+                margin: 8px;
+                padding: 15px 20px;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                color: black;
+                margin: 200px 10px 3px 600px;
+                border: 0;
+            }
+            </style>
+          </head>
+          <body>
+
+            <h2>Sabe o número certo?</h2>
+
+            <button onclick="Numero()">Testar</button>
+              <script>
+              function Numero() {
+let numero = (prompt( "Digite um número"));
+numero = Number(numero);
+if (numero >= 20 && numero <= 90){
+alert("Acertou!");
+}else{
+alert("Errou!");
+}             
+}
+<\/script>
+
+            <button class="botoes" onclick="Voltar()">Voltar</button>
+            <script>
+             function Voltar()  {
+               window.close();
+               }
+               <\/script>
+            
+</body>
+</html>
+`;
+NovaAba.document.open();
+NovaAba.document.write(conteudo);
+NovaAba.document.close();
+    }
+    </script>
+
+     <button onclick="AbrirExercicio5()"> Exercício 5</button>
+     <script>
+     function AbrirExercicio5() {
+     const NovaAba = window.open("","_blank")
+         const conteudo = `
+           <!DOCTYPE html>
+           <html>
+            <head>
+             <title>Exercício 5 - Orgazinador de Nº</title>
+             <style>
+                 body {
+                 font-family: Arial, sans-serif;
+                 text-align: center;
+                 color: black;
+                 padding: 50px;
+                 } 
+                 .botoes {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: silver;
+                margin: 8px;
+                padding: 15px 20px;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                color: black;
+                margin: 200px 10px 3px 600px;
+                border: 0;
+                }
+             </style>
+           </head>
+           <body>
+             <h2>Orgazinador de Números!</h2>
+             <button onclick="Crescente()">Crescente</button>
+     <script>
+     function Crescente() {
+       let num1= prompt("Digite um número:").replace(",",".").trim();
+       let num2= prompt("Digite um número:").replace(",",".").trim();
+       let num3= prompt("Digite um número:").replace(",",".").trim();
+       let num4= prompt("Digite um número:").replace(",",".").trim();
+       
+       num1 = parseFloat(num1)
+       num2 = parseFloat(num2)
+       num3 = parseFloat(num3)
+       num4 = parseFloat(num4)
+
+       let nums= [num1,num2,num3,num4];
+       nums.sort((a,b) => a-b);
+
+       if (num1===num2||num1===num3||num1===num4||num2===num3||num2===num4||num3===num4){
+        alert ("Seus números são IGUAIS!")
+       } else {
+        alert ("Seus números em ordem crescente são: "+nums.join(",")+" .");
+       }
+      }        
+     <\/script>
+
+     <button onclick="Decrescente()">Decrescente</button>
+     <script>
+     function Decrescente() {
+       let num1= prompt("Digite um número:").replace(",",".").trim();
+       let num2= prompt("Digite um número:").replace(",",".").trim();
+       let num3= prompt("Digite um número:").replace(",",".").trim();
+       let num4= prompt("Digite um número:").replace(",",".").trim();
+       
+       num1 = parseFloat(num1)
+       num2 = parseFloat(num2)
+       num3 = parseFloat(num3)
+       num4 = parseFloat(num4)
+
+       let nums= [num1,num2,num3,num4];
+       nums.sort((a,b) => a-b).reverse();
+
+       if (num1===num2||num1===num3||num1===num4||num2===num3||num2===num4||num3===num4){
+       alert("Seus números são IGUAIS!")
+       } else {
+         alert("Seus números em ordem decrescente são: "+nums.join(",")+" .");
+       }
+       }
+        <\/script>
+
+        <button class="botoes" onclick="Voltar()">Voltar</button>
+             <script>
+             function Voltar()  {
+             window.close();
+             }
+             <\/script>
+ </body>
+ </html>
+ `;
+ NovaAba.document.open();
+ NovaAba.document.write(conteudo);
+ NovaAba.document.close();
+     }
+     </script>
+
+ <button onclick="AbrirExercicio6()"> Exercício 6</button>
+    <script>
+    function AbrirExercicio6() {
+    const NovaAba = window.open("","_blank")
+        const conteudo = `
+          <!DOCTYPE html>
+          <html>
+           <head>
+            <title>Exercício 6 - Verificador de Triângulos</title>
+            <style>
+                body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                color: black;
+                padding: 50px;
+                } 
+                .botoes {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: silver;
+                margin: 8px;
+                padding: 15px 20px;
+                text-align: center;
+                font-family:Arial, Helvetica, sans-serif;
+                color: black;
+                margin: 200px 10px 3px 600px;
+                border: 0;
+            }
+            </style>
+          </head>
+          <body>
+
+            <h2>Verificador de Triângulos</h2>
+            <button onclick="Verificar()">Verificar</button>
+            <div id="imagem"</div>
+            <script>
+              function Verificar() {
+            let a = parseFloat(prompt("Digite o valor do lado A:"));
+            let b = parseFloat(prompt("Digite o valor do lado B:"));
+            let c = parseFloat(prompt("Digite o valor do lado C:"));
+            let imgDiv = document.getElementById("imagem");
+
+    if (a + b > c && a + c > b && b + c > a) {
+    if (a === b && b === c) {
+        alert("Triângulo Equilátero: 3 lados iguais.");
+        imgDiv.innerHTML = '<img src="https://www.arqhys.com/wp-content/uploads/2018/01/altura-de-un-triangulo-equilatero.jpg" width="300">';
+    } else if (a === b || a === c || b === c) {
+        alert("Triângulo Isósceles: 2 lados iguais.");
+        imgDiv.innerHTML = '<img src="https://www.masterlogistica.es/wp-content/uploads/2024/02/triangulo-isosceles.jpg" width="300">';
+    } else {
+        alert("Triângulo Escaleno: 3 lados diferentes.");
+        imgDiv.innerHTML = '<img src="https://static.todamateria.com.br/upload/tr/ia/trianguloescalenoexercicio.jpg" width="300">';
+            }
+    } else {
+        alert("Os valores informados não formam um triângulo.");
+        imgDiv.innerHTML = '';
+      
+    }
+}
+ <\/script>
+</div>
+            <button class="botoes" onclick="Voltar()">Voltar</button>
+        <script>
+        function Voltar()  {
+        window.close();
+        }
+    <\/script>
+
+</body>
+</html>
+`;
+NovaAba.document.open();
+NovaAba.document.write(conteudo);
+NovaAba.document.close();
+    }
+    </script>
+
+     <button onclick="AbrirExercicio7()"> Exercício 7</button>
+     <script>
+     function AbrirExercicio7() {
+     const NovaAba = window.open("","_blank")
+         const conteudo = `
+           <!DOCTYPE html>
+           <html>
+            <head>
+             <title>Exercício 7 - Peso Ideal</title>
+             <style>
+                 body {
+                 font-family: Arial, sans-serif;
+                 text-align: center;
+                 color: black;
+                 padding: 50px;
+                 }
+                 .botoes {
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 background-color: silver;
+                 margin: 8px;
+                 padding: 15px 20px;
+                 text-align: center;
+                 font-family:Arial, Helvetica, sans-serif;
+                 color: black;
+                 margin: 200px 10px 3px 600px;
+                 border: 0;
+                 }
+             </style>
+           </head>
+           <body>
+ 
+             <h2>Cálculo de Peso Ideal</h2>
+             <h4>Qual o seu sexo?</h4>
+
+             <button onclick="Masculino()">Masculino</button>
+             <script>
+             function Masculino() {
+             let altu = prompt("Qual a sua altura?(m)").replace(",",".").trim();
+             altu = parseFloat(altu);
+             let ideal = (72.7*altu)-58;
+             if (isNaN===altu||altu>3) {
+             alert ("Por favor, insira uma altura válida!");
+             } else {
+             alert ("O seu peso ideal é de "+ideal.toFixed(2)+".");
+             }  
+             }
+             <\/script>
+
+             <button onclick="Feminino()">Feminino</button>
+             <script>
+             function Feminino() {
+             let altu = prompt("Qual a sua altura?(m)").replace(",",".").trim();
+             altu = parseFloat(altu);
+             let ideal = (62.1*altu)-58;
+             if (isNaN===altu||altu>3) {
+             alert ("Por favor, insira uma altura válida!");
+             } else {
+             alert ("O seu peso ideal é de "+ideal.toFixed(2)+".");
+             }
+             }
+             <\/script>
+
+             <button class="botoes" onclick="Voltar()">Voltar</button>
+             <script>
+             function Voltar()  {
+             window.close();
+             };
+             <\/script>
+     
+ </body>
+ </html>
+ `;
+ NovaAba.document.open();
+ NovaAba.document.write(conteudo);
+ NovaAba.document.close();
+     }
+     </script>
+     <button onclick="SobreNos()">Sobre Nós</button>
+     <script>
+      function SobreNos() {
+        const NovaAba = window.open("","_blank")
+        const conteudo = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Sobre Nós</title>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+                 text-align: center;
+                 color: black;
+                 padding: 50px;
+                 background-image: url ("https://wallpaperaccess.com/full/1555163.jpg")
+                 }
+             .botoes {
+                 position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 background-color: silver;
+                 margin: 8px;
+                 padding: 15px 20px;
+                 text-align: center;
+                 font-family:Arial, Helvetica, sans-serif;
+                 color: black;
+                 margin: 200px 10px 3px 600px;
+                 border: 0;
+              }
+          </style>
+          </head>
+          <body>
+
+          <h2>Sobre Nós</h2>
+          <h3>Alunos participantes do 1DSEM1:</h3>
+          <br>
+          <h4>José Robério de Aquino Silva Junior - RM 250004 <br> Gabriel Ribeiro Moura Gomes - RM 250120</h4>
+          <br>
+          <h3>Fale Conosco:</h3>
+          <h4>E-mail de Contato de José: <a href="mailto:jose.silva2399@etec.sp.gov.br">jose.silva2399@etec.sp.gov.br</a><br>E-mail de Contato de Gabriel: <a href="mailto:gabriel.gomes294@etec.sp.gov.br">gabriel.gomes294@etec.sp.gov.br</a></h4>
+
+          <button class="botoes" onclick="Voltar()">Voltar</button>
+             <script>
+             function Voltar()  {
+             window.close();
+             };
+             
+     <\/script>
+     </body>
+     </html>
+`;
+NovaAba.document.open();
+ NovaAba.document.write(conteudo);
+ NovaAba.document.close();
+}
+</script>
+
+</div>
+</body>
+</html>
