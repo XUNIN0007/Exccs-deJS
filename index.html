@@ -67,43 +67,17 @@
              function Voltar()  {
                window.close();
                }
-            let valor = parseFloat(prompt("Qual foi o valor final da sua compra?").replace(",",".").trim());
-let desc = parseInt(prompt("Qual foi o desconto?\n"+
-"1: 5%\n"+
-"2: 10%\n"+
-"3: 15%\n"+
-"4: 20%\n"));
-let total = 0;
-switch (desc) {
-
-case 1:
-conta = valor*0.05
-total = valor-conta
-alert ("O total a ser pago será de R$ "+total.toFixed(2));
-break;
-
-case 2:
-conta = valor*0.1
-total = valor-conta
-alert ("O total a ser pago será de R$ "+total.toFixed(2));
-break;
-
-case 3:
-conta = valor*0.15
-total = valor-conta
-alert ("O total a ser pago será de R$ "+total.toFixed(2));
-break;
-
-case 4:
-conta = valor*0.20
-total = valor-conta
-alert ("O total a ser pago será de R$ "+total.toFixed(2));
-break;
-
-default:
-alert("Por favor digite uma opção de desconto válida!")
-break;
-}
+             let N = prompt("Digite um número");
+             if (N) {
+             let digito = N.split('').reverse().join('');
+             if (digito === N) {
+             document.write("Seu número é um palíndromo");
+             } else {
+             document.write("Seu número não é um Palíndromo");
+             } 
+             } else {
+             document.write("Tente Novamente");
+             }
     <\/script>
 </body>
 </html>
